@@ -20,44 +20,33 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.Result;
 import com.google.zxing.ResultMetadataType;
-import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.camera.CameraManager;
 import com.google.zxing.client.result.ResultParser;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.OrientationEventListener;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.IOException;
-import java.text.DateFormat;
 import java.util.Collection;
 import java.util.EnumSet;
 import java.util.Map;
@@ -102,6 +91,10 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback
   private BeepManager beepManager;
   private AmbientLightManager ambientLightManager;
 
+  MyOrientationDetector myOrientationDetector;
+
+
+
   ViewfinderView getViewfinderView()
   {
     return viewfinderView;
@@ -132,7 +125,11 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback
     beepManager = new BeepManager(this);
     ambientLightManager = new AmbientLightManager(this);
 
-    //    PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+    //add by tancolo
+    myOrientationDetector = new MyOrientationDetector(this);
+    myOrientationDetector.setLastOrientation(getWindowManager().getDefaultDisplay().getRotation());
+    //end add
+
   }
 
 
@@ -162,17 +159,46 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback
     decodeFormats = null;
     characterSet = null;
 
+    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+    if (prefs.getBoolean(PreferencesActivity.KEY_DISABLE_AUTO_ORIENTATION, true)) {
+      setRequestedOrientation(getCurrentOrientation());
+    } else {
+      setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR); // 旋转
+      myOrientationDetector.enable(); //启用监听
+    }
+
     SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
     SurfaceHolder surfaceHolder = surfaceView.getHolder();
-    if (hasSurface)
-    {
+    if (hasSurface) {
       // The activity was paused but not stopped, so the surface still exists. Therefore
       // surfaceCreated() won't be called, so init the camera here.
       initCamera(surfaceHolder);
-    } else
-    {
+    } else {
       // Install the callback and wait for surfaceCreated() to init the camera.
       surfaceHolder.addCallback(this);
+    }
+
+  }
+
+  private int getCurrentOrientation() {
+    int rotation = getWindowManager().getDefaultDisplay().getRotation();
+    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+      switch (rotation) {
+        case Surface.ROTATION_0:
+        case Surface.ROTATION_90:
+          return ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
+        default:
+          return ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE;
+      }
+    } else {
+      switch (rotation) {
+        case Surface.ROTATION_0:
+        case Surface.ROTATION_270:
+          return ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+        default:
+          return ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT;
+      }
     }
   }
 
@@ -189,12 +215,12 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback
     beepManager.close();
     cameraManager.closeDriver();
     //historyManager = null; // Keep for onActivityResult
-    if (!hasSurface)
-    {
+    if (!hasSurface) {
       SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
       SurfaceHolder surfaceHolder = surfaceView.getHolder();
       surfaceHolder.removeCallback(this);
     }
+    myOrientationDetector.disable();
     super.onPause();
   }
 
@@ -396,4 +422,47 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback
   {
     viewfinderView.drawViewfinder();
   }
+
+  private class MyOrientationDetector extends OrientationEventListener {
+
+    private int lastOrientation = -1;
+
+    MyOrientationDetector(Context context) {
+      super(context);
+    }
+
+    void setLastOrientation(int rotation) {
+      switch (rotation) {
+        case Surface.ROTATION_90:
+          lastOrientation = 270;
+          break;
+        case Surface.ROTATION_270:
+          lastOrientation = 90;
+          break;
+        default:
+          lastOrientation = -1;
+      }
+    }
+
+    @Override
+    public void onOrientationChanged(int orientation) {
+      Log.d(TAG, "orientation:" + orientation);
+      if (orientation > 45 && orientation < 135) {
+        orientation = 90;
+      } else if (orientation > 225 && orientation < 315) {
+        orientation = 270;
+      } else {
+        orientation = -1;
+      }
+      if ((orientation == 90  && lastOrientation == 270) || (orientation == 270  && lastOrientation == 90)) {
+        Log.i(TAG, "orientation:" + orientation + "lastOrientation:" + lastOrientation);
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+        lastOrientation = orientation;
+        Log.i(TAG, "SUCCESS");
+      }
+    }
+  }
+
 }

@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-134:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-134:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-134:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-134:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-134:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-134:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-134:12
 	package
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:18:11-52
 		INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml
@@ -100,7 +100,7 @@ ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManif
 	android:name
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:40:17-53
 application
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:42:3-133:17
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:42:3-132:17
 	android:label
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:44:16-48
 	android:icon
@@ -110,126 +110,124 @@ ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManif
 	android:logo
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:43:16-54
 activity#com.google.zxing.client.android.CaptureActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:46:5-84:16
-	android:screenOrientation
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:47:15-58
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:46:5-83:16
 	android:clearTaskOnLaunch
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:48:15-47
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:47:15-47
 	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:49:15-44
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:48:15-44
 	android:windowSoftInputMode
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:51:15-62
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:50:15-62
 	android:theme
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:50:15-50
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:49:15-50
 	android:name
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:46:15-46
 intent-filter#android.intent.category.DEFAULT+com.google.zxing.client.android.SCAN
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:52:7-55:23
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:51:7-54:23
 action#com.google.zxing.client.android.SCAN
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:53:9-70
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:52:9-70
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:53:17-68
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:52:17-68
 category#android.intent.category.DEFAULT
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:54:9-67
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:53:9-67
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:54:19-65
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:53:19-65
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:57:7-62:23
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:56:7-61:23
 action#android.intent.action.VIEW
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:58:9-60
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:57:9-60
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:58:17-58
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:57:17-58
 category#android.intent.category.BROWSABLE
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:60:9-69
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:59:9-69
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:60:19-67
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:59:19-67
 data
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:61:9-92
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:60:9-92
 	android:path
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:61:70-90
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:60:70-90
 	android:host
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:61:37-69
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:60:37-69
 	android:scheme
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:61:15-36
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:60:15-36
 	android:mimeType
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:98:15-46
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:97:15-46
 activity#com.google.zxing.client.android.PreferencesActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:85:5-87:46
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:84:5-86:46
 	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:87:15-44
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:86:15-44
 	android:label
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:86:15-55
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:85:15-55
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:85:15-50
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:84:15-50
 activity#com.google.zxing.client.android.encode.EncodeActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:88:5-106:16
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:87:5-105:16
 	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:89:15-44
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:88:15-44
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:88:15-52
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:87:15-52
 intent-filter#android.intent.category.DEFAULT+com.google.zxing.client.android.ENCODE
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:90:7-93:23
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:89:7-92:23
 action#com.google.zxing.client.android.ENCODE
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:91:9-72
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:90:9-72
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:91:17-70
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:90:17-70
 intent-filter#android.intent.action.SEND+android.intent.category.DEFAULT
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:95:7-99:23
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:94:7-98:23
 action#android.intent.action.SEND
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:96:9-60
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:95:9-60
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:96:17-58
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:95:17-58
 activity#com.google.zxing.client.android.book.SearchBookContentsActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:107:5-115:16
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:106:5-114:16
 	android:screenOrientation
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:110:15-58
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:109:15-58
 	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:109:15-44
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:108:15-44
 	android:label
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:108:15-47
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:107:15-47
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:107:15-62
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:106:15-62
 intent-filter#android.intent.category.DEFAULT+com.google.zxing.client.android.SEARCH_BOOK_CONTENTS
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:111:7-114:23
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:110:7-113:23
 action#com.google.zxing.client.android.SEARCH_BOOK_CONTENTS
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:112:9-86
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:111:9-86
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:112:17-84
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:111:17-84
 activity#com.google.zxing.client.android.share.ShareActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:116:5-123:16
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:115:5-122:16
 	android:screenOrientation
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:118:15-47
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:117:15-47
 	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:117:15-44
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:116:15-44
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:116:15-50
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:115:15-50
 intent-filter#android.intent.category.DEFAULT+com.google.zxing.client.android.SHARE
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:119:7-122:23
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:118:7-121:23
 action#com.google.zxing.client.android.SHARE
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:120:9-71
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:119:9-71
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:120:17-69
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:119:17-69
 activity#com.google.zxing.client.android.history.HistoryActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:124:5-126:46
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:123:5-125:46
 	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:126:15-44
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:125:15-44
 	android:label
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:125:15-52
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:124:15-52
 	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:124:15-54
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:123:15-54
 activity#com.google.zxing.client.android.share.BookmarkPickerActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:127:5-129:46
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:126:5-128:46
 	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:129:15-44
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:128:15-44
 	android:label
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:128:15-59
-	android:name
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:127:15-59
-activity#com.google.zxing.client.android.share.AppPickerActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:130:5-132:46
-	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:132:15-44
-	android:label
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:131:15-54
 	android:name
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:126:15-59
+activity#com.google.zxing.client.android.share.AppPickerActivity
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:129:5-131:46
+	android:stateNotNeeded
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:131:15-44
+	android:label
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:130:15-54
+	android:name
+		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:129:15-54
