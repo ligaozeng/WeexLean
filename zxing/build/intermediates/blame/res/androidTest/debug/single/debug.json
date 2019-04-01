@@ -8,12 +8,12 @@
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout-land/share.xml"
     },
     {
-        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_history_list_item.xml.flat",
-        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/history_list_item.xml"
-    },
-    {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_share.xml.flat",
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/share.xml"
+    },
+    {
+        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_history_list_item.xml.flat",
+        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/history_list_item.xml"
     },
     {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_app_picker_list_item.xml.flat",
@@ -40,12 +40,12 @@
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/launcher_icon.png"
     },
     {
-        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/menu_history.xml.flat",
-        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/menu/history.xml"
-    },
-    {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_bookmark_picker_list_item.xml.flat",
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/bookmark_picker_list_item.xml"
+    },
+    {
+        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/menu_history.xml.flat",
+        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/menu/history.xml"
     },
     {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_launcher_icon.png.flat",
@@ -60,12 +60,12 @@
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/raw/beep.ogg"
     },
     {
-        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_search_book_contents_header.xml.flat",
-        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/search_book_contents_header.xml"
-    },
-    {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/drawable_launcher_icon.png.flat",
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/drawable/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_search_book_contents_header.xml.flat",
+        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/search_book_contents_header.xml"
     },
     {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout-land_encode.xml.flat",
@@ -76,12 +76,12 @@
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/xml/preferences.xml"
     },
     {
-        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_search_book_contents_list_item.xml.flat",
-        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/search_book_contents_list_item.xml"
-    },
-    {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_help.xml.flat",
         "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/help.xml"
+    },
+    {
+        "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_search_book_contents_list_item.xml.flat",
+        "source": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/bundles/debug/res/layout/search_book_contents_list_item.xml"
     },
     {
         "merged": "/Users/mac/AndroidStudioProjects/WeexLean/zxing/build/intermediates/res/merged/androidTest/debug/layout_capture.xml.flat",

@@ -117,8 +117,8 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback
 
     Window window = getWindow();
     window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    setContentView(R.layout.capture);
 
+    setContentView(R.layout.capture);
 
     hasSurface = false;
     inactivityTimer = new InactivityTimer(this);

@@ -46,7 +46,6 @@
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"
             android:clearTaskOnLaunch="true"
-            android:screenOrientation="sensorLandscape"
             android:stateNotNeeded="true"
             android:theme="@style/CaptureTheme"
             android:windowSoftInputMode="stateAlwaysHidden" >
@@ -165,11 +164,6 @@
         <activity
             android:name="com.google.zxing.client.android.share.AppPickerActivity"
             android:label="@string/app_picker_name"
-            android:stateNotNeeded="true" />
-        <activity
-            android:name="com.google.zxing.client.android.HelpActivity"
-            android:label="@string/menu_help"
-            android:screenOrientation="user"
             android:stateNotNeeded="true" />
     </application>
 
