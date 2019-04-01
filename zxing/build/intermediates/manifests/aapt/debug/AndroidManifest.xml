@@ -175,11 +175,6 @@
             android:name="com.google.zxing.client.android.share.AppPickerActivity"
             android:label="@string/app_picker_name"
             android:stateNotNeeded="true" />
-        <activity
-            android:name="com.google.zxing.client.android.HelpActivity"
-            android:label="@string/menu_help"
-            android:screenOrientation="user"
-            android:stateNotNeeded="true" />
     </application>
 
 </manifest>

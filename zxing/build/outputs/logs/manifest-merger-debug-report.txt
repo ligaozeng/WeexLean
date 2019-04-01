@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-139:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-139:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-139:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-139:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-139:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-139:12
-INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-139:12
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
+INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:17:1-135:12
 	package
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:18:11-52
 		INJECTED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml
@@ -100,7 +100,7 @@ ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManif
 	android:name
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:40:17-53
 application
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:42:3-137:17
+ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:42:3-133:17
 	android:label
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:44:16-48
 	android:icon
@@ -233,13 +233,3 @@ ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManif
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:131:15-54
 	android:name
 		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:130:15-54
-activity#com.google.zxing.client.android.HelpActivity
-ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:133:5-136:46
-	android:screenOrientation
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:135:15-47
-	android:stateNotNeeded
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:136:15-44
-	android:label
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:134:15-48
-	android:name
-		ADDED from /Users/mac/AndroidStudioProjects/WeexLean/zxing/src/main/AndroidManifest.xml:133:15-43
