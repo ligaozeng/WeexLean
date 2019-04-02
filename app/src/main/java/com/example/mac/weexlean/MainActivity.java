@@ -12,7 +12,7 @@ import com.google.zxing.client.android.CaptureActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button,button1;
+    private Button button,button1,button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,TestActivity.class);
+                Intent intent = new Intent(MainActivity.this,LocalActivity.class);
                 startActivity(intent);
             }
         });
@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,CaptureActivity.class);
                 startActivityForResult(intent,1001);
+            }
+        });
+        button2 = findViewById(R.id.main_btn2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,TestActivity.class);
+                startActivity(intent);
             }
         });
     }

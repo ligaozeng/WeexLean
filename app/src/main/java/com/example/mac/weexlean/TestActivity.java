@@ -5,11 +5,23 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.taobao.weex.IWXRenderListener;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
 import com.taobao.weex.utils.WXFileUtils;
+
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /**
  * Created by： lgz
@@ -17,74 +29,74 @@ import com.taobao.weex.utils.WXFileUtils;
  * Desc：
  */
 
-public class TestActivity extends Activity implements IWXRenderListener {
+public class TestActivity extends Activity  {
 
-    WXSDKInstance mWXSDKInstance;
-    String TAG = "TestActivity";
+    private Button btn1,btn2;
+    private ImageView imageView;
+    private TextView textView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-        mWXSDKInstance = new WXSDKInstance(this);
-        mWXSDKInstance.registerRenderListener(this);
-        /**
-         * bundleUrl source http://dotwe.org/vue/38e202c16bdfefbdb88a8754f975454c
-         */
-//        String pageName = "WXSample";
-//        String bundleUrl = "http://dotwe.org/raw/dist/38e202c16bdfefbdb88a8754f975454c.bundle.wx";
-//        mWXSDKInstance.renderByUrl(pageName, bundleUrl, null, null,1000,1000, WXRenderStrategy.APPEND_ASYNC);
-        mWXSDKInstance.render("WXSample", WXFileUtils.loadFileContent("index.js",this),null,null,-1,-1,WXRenderStrategy.APPEND_ASYNC);
+        btn1 = findViewById(R.id.test_btn1);
+        btn2 = findViewById(R.id.test_btn2);
+        imageView = findViewById(R.id.test_image);
+        textView = findViewById(R.id.test_text);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setVisibility(View.INVISIBLE);
+                imageView.setVisibility(View.VISIBLE);
+                String url = "https://img-my.csdn.net/uploads/201407/26/1406383275_3977.jpg";
+                Glide.with(TestActivity.this)
+                        .load(url)
+                        .centerCrop()
+                        .placeholder(R.mipmap.ic_launcher)
+                        .crossFade()
+                        .into(imageView);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.INVISIBLE);
+                String url = "http://www.baidu.com";
+                OkHttpClient okHttpClient = new OkHttpClient();
+                Request request = new Request.Builder().url(url).method("GET",null).build();
+                Call call = okHttpClient.newCall(request);
+                call.enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, final IOException e) {runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView.setText(e.toString());
+                        }
+                    });
+                    }
+
+                    @Override
+                    public void onResponse(Call call, final Response response) throws IOException {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                textView.setText(response.toString());
+                            }
+                        });
+                    }
+                });
+
+            }
+        });
+
+
+        btn1.performClick();
+
     }
 
-    @Override
-    public void onViewCreated(WXSDKInstance instance, View view) {
-        setContentView(view);
-    }
-
-    @Override
-    public void onRenderSuccess(WXSDKInstance instance, int width, int height) {
-        Log.e(TAG, "onRenderSuccess");
-    }
-
-    @Override
-    public void onRefreshSuccess(WXSDKInstance instance, int width, int height) {
-        Log.e(TAG, "onRefreshSuccess");
-    }
-
-    @Override
-    public void onException(WXSDKInstance instance, String errCode, String msg) {
-        Log.e(TAG, "onException");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if(mWXSDKInstance!=null){
-            mWXSDKInstance.onActivityResume();
-        }
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if(mWXSDKInstance!=null){
-            mWXSDKInstance.onActivityPause();
-        }
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if(mWXSDKInstance!=null){
-            mWXSDKInstance.onActivityStop();
-        }
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if(mWXSDKInstance!=null){
-            mWXSDKInstance.onActivityDestroy();
-        }
-    }
 
 }
