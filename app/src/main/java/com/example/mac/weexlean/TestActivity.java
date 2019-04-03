@@ -54,7 +54,7 @@ public class TestActivity extends Activity  {
                 Glide.with(TestActivity.this)
                         .load(url)
                         .centerCrop()
-                        .placeholder(R.mipmap.ic_launcher)
+                        .placeholder(R.drawable.loding)
                         .crossFade()
                         .into(imageView);
             }

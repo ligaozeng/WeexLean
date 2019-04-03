@@ -34,8 +34,8 @@ public class LocalActivity extends Activity implements IWXRenderListener {
          */
 //        String pageName = "WXSample";
 //        String bundleUrl = "http://dotwe.org/raw/dist/38e202c16bdfefbdb88a8754f975454c.bundle.wx";
-//        mWXSDKInstance.renderByUrl(pageName, bundleUrl, null, null,1000,1000, WXRenderStrategy.APPEND_ASYNC);
-        mWXSDKInstance.render("WXSample", WXFileUtils.loadFileContent("index.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
+//        mWXSDKInstance.renderByUrl(TAG, bundleUrl, null, null,1000,1000, WXRenderStrategy.APPEND_ASYNC);
+        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("index.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
     }
 
     @Override
@@ -55,7 +55,8 @@ public class LocalActivity extends Activity implements IWXRenderListener {
 
     @Override
     public void onException(WXSDKInstance instance, String errCode, String msg) {
-        Log.e(TAG, "onException");
+        Log.e(TAG, "onException："+errCode);
+        Log.e(TAG, msg);
     }
 
     @Override

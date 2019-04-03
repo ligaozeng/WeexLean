@@ -6,6 +6,21 @@ import com.taobao.weex.adapter.IWXHttpAdapter;
 import com.taobao.weex.common.WXRequest;
 import com.taobao.weex.common.WXResponse;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.internal.http.HttpMethod;
+
 /**
  * Created by： lgz
  * Time： 2019/3/29
@@ -15,54 +30,59 @@ import com.taobao.weex.common.WXResponse;
 public class WXHpptAdapter implements IWXHttpAdapter {
 
     @Override
-    public void sendRequest(WXRequest request, OnHttpListener listener) {
-//        if (listener != null) {
-//            listener.onHttpStart();
-//            WXResponse response = this.getResponseByPackageApp(request);
-//            if (TextUtils.equals("200", response.statusCode)) {
-//                response.extendParams.put("cacheType", "zcache");
-//                listener.onHttpFinish(response);
-//            } else {
-//
-//                Request.Builder builder = new Request.Builder()
-//                        .url(request.url);
-//
-//                //添加header
-//                addHeader(builder, request.paramMap);
-//
-//                if (request.method == null) {
-//                    request.method = "GET";
-//                }
-//                request.method = request.method.toUpperCase();
-//
-//                if (request.body == null) {
-//                    request.body = "";
-//                }
-//                Request okRequest;
-//                switch (request.method) {
-//                    case "POST":
-//                    case "PUT":
-//                    case "PATCH":
-//                        MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
-//                        if (request.paramMap != null) {
-//                            String type = request.paramMap.get("Content-Type");
-//                            if (type != null) {
-//                                mediaType = MediaType.parse(type);
-//                            }
-//                        }
-//                        RequestBody requestBody = RequestBody.create(mediaType, request.body);
-//                        okRequest = builder.method(request.method, requestBody).build();
-//                        requestNet(okRequest, mOkHttpClient, listener);
-//
-//                        break;
-//                    default:
-//                        okRequest = builder.method(request.method, null).build();
-//                        requestNet(okRequest, mOkHttpClient, listener);
-//                        break;
-//                }
-//            }
-//
-//        }
+    public void sendRequest(WXRequest request, final OnHttpListener listener) {
+        OkHttpClient client = new OkHttpClient.Builder()
+//                .addNetworkInterceptor(new WeexOkhttp3Interceptor())
+                .connectTimeout(request.timeoutMs, TimeUnit.MILLISECONDS)
+                .readTimeout(request.timeoutMs, TimeUnit.MILLISECONDS)
+                .build();
+
+        String method = request.method == null ? "GET" : request.method.toUpperCase();
+        String requestBodyString = request.body == null ? "{}" : request.body;
+        RequestBody body = HttpMethod.requiresRequestBody(method) ? RequestBody.create(MediaType.parse("application/json"), requestBodyString) : null;
+
+        Request.Builder requestBuilder = new Request.Builder()
+                .url(request.url)
+                .method(method, body);
+
+        for (Map.Entry<String, String> param : request.paramMap.entrySet()) {
+            requestBuilder.addHeader(param.getKey(), param.getValue());
+        }
+
+        client.newCall(requestBuilder.build()).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                WXResponse wxResponse = new WXResponse();
+                wxResponse.errorMsg = e.getMessage();
+                wxResponse.errorCode = "-1";
+                wxResponse.statusCode = "-1";
+                listener.onHttpFinish(wxResponse);
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) {
+                WXResponse wxResponse = new WXResponse();
+                byte[] responseBody = new byte[0];
+                try {
+                    responseBody = response.body().bytes();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                wxResponse.data = new String(responseBody);
+                wxResponse.statusCode = String.valueOf(response.code());
+                wxResponse.originalData = responseBody;
+                wxResponse.extendParams = new HashMap<>();
+                for (Map.Entry<String, List<String>> entry : response.headers().toMultimap().entrySet()) {
+                    wxResponse.extendParams.put(entry.getKey(), entry.getValue());
+                }
+
+                if (response.code() < 200 || response.code() > 299) {
+                    wxResponse.errorMsg = response.message();
+                }
+
+                listener.onHttpFinish(wxResponse);
+            }
+        });
     }
 
 }

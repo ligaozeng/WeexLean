@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==1001 && resultCode== Activity.RESULT_OK)
         {
             String result=data.getStringExtra(CaptureActivity.KEY_DATA);
-            Toast.makeText(this, "qrcode result is "+result, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this,WeexActivity.class);
+            intent.putExtra("weexUrl",result);
+            startActivity(intent);
         }
     }
 

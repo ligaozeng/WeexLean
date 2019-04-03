@@ -19,6 +19,9 @@ public class WXApplication extends Application {
     public void onCreate() {
         super.onCreate();
         // weex
+
+        WXSDKEngine.addCustomOptions("appName", "Haidilao");
+        WXSDKEngine.addCustomOptions("appGroup", "Haidilao");
         InitConfig config = (new InitConfig.Builder())
                 .setImgAdapter(new WXImageAdapter())
                 .setHttpAdapter(new WXHpptAdapter())
